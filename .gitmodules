@@ -1,0 +1,12 @@
+[submodule "port/GP22"]
+	path = driver/GP22
+	url = https://github.com/bassem-mostafa/TDC_GP22.git
+[submodule "port/Stub"]
+	path = port/Stub
+	url = https://github.com/bassem-mostafa/TDC_Stub.git
+[submodule "driver/GP22"]
+	path = driver/GP22
+	url = https://github.com/bassem-mostafa/TDC_GP22.git
+[submodule "port/Flow_Meter"]
+	path = port/Flow_Meter
+	url = https://github.com/bassem-mostafa/TDC_Flow_Meter.git
