@@ -94,14 +94,14 @@ extern "C"
     {
         TDC_t TDCx;
 
+        TDC_CallbackOnComplete_t OnComplete;
+        TDC_CallbackOnReading_t OnReading;
+
         union
         {
             TDC_Instance_Context_t * Context;
             TDC_GP22_Instance_t * GP22;
         };
-
-        TDC_CallbackOnComplete_t OnComplete;
-        TDC_CallbackOnReading_t OnReading;
     } TDC_Instance_t;
 
     // #############################################################################
