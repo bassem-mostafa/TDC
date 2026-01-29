@@ -136,7 +136,7 @@ extern "C"
      *
      *  @param[in] TDCx    Instance
      *  @param[in] Channel Captured Channel
-     *  @param[in] Sample Measurement Value
+     *  @param[in] Sample  Measurement Value
      *
      *  @return void
      */
