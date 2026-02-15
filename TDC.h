@@ -117,6 +117,11 @@ extern "C"
     } TDC_Channel_t;
 
     /**
+     *  @brief TDC Delay
+     */
+    typedef double TDC_Delay_t;
+
+    /**
      *  @brief TDC Sample Type
      */
     typedef double TDC_Sample_t;
@@ -198,6 +203,16 @@ extern "C"
     // TODO Add API for setting transmitting channels
 
     // TODO Add API for setting receiving channels
+
+    /**
+     *  @brief Set delay mask of TDC instance
+     *
+     *  @param[in] TDCx  Instance
+     *  @param[in] Delay Delay Mask value in nano-seconds
+     *
+     *  @return TDC_Status_t
+     */
+    TDC_Status_t TDC_SetDelay( TDC_t TDCx, TDC_Delay_t Delay );
 
     /**
      *  @brief Starts sampling process of TDC instance

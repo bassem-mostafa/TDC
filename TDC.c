@@ -334,6 +334,38 @@ TDC_Status_t TDC_SetCallbackOnReading( TDC_t TDCx, TDC_CallbackOnReading_t Callb
     return Status;
 }
 
+TDC_Status_t TDC_SetDelay( TDC_t TDCx, TDC_Delay_t Delay )
+{
+    TDC_Status_t Status = TDC_Status_Success;
+    TDC_Status_t TDC_Status = TDC_Status_Success;
+
+    do
+    {
+        TDC_Trace( "%s( TDCx=%d, Delay=%.3f )", __FUNCTION__, TDCx, Delay );
+
+        if ( ( Status = TDC_IsValid( TDCx ) ) != TDC_Status_Success )
+        {
+            break;
+        }
+
+        for ( TDC_t TDC_x = TDC_Null; TDC_x < TDC_Count; ++TDC_x )
+        {
+            if ( TDCx != TDC_All && TDCx != TDC_x )
+            {
+                continue;
+            }
+
+            if ( ( TDC_Status = TDC_Instance_SetDelayMask( &TDC_Context.Instance[ TDCx ], Delay ) ) != TDC_Status_Success )
+            {
+                Status = TDC_Status;
+            }
+        }
+    }
+    while ( 0 );
+
+    return Status;
+}
+
 TDC_Status_t TDC_Start( TDC_t TDCx )
 {
     TDC_Status_t Status = TDC_Status_Error;
@@ -370,7 +402,7 @@ TDC_Status_t TDC_Start( TDC_t TDCx )
 // #### Public Variable(s) #####################################################
 // #############################################################################
 
-const char TDC_VERSION[] = "0.0.0.v20260202-1914";
+const char TDC_VERSION[] = "0.0.0.v20260215-1836";
 
 // #############################################################################
 // #### File Guard #############################################################

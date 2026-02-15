@@ -120,9 +120,9 @@ extern "C"
     TDC_Status_t TDC_Instance_Cycle( TDC_Instance_t * Instance );
     TDC_Status_t TDC_Instance_DeInitialize( TDC_Instance_t * Instance );
 
-    TDC_Status_t TDC_Instance_Start( TDC_Instance_t * Instance );
+    TDC_Status_t TDC_Instance_SetDelayMask( TDC_Instance_t * Instance, TDC_Delay_t Delay );
 
-    // TODO Add APIs
+    TDC_Status_t TDC_Instance_Start( TDC_Instance_t * Instance );
 
     // #############################################################################
     // #### Public Variable(s) #####################################################
