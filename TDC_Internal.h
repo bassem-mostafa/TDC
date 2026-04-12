@@ -88,7 +88,7 @@ extern "C"
     // #### Public Type(s) #########################################################
     // #############################################################################
 
-    typedef struct TDC_Instance_Context_t TDC_Instance_Context_t;
+    typedef struct TDC_InstanceContext_t TDC_InstanceContext_t;
 
     typedef struct TDC_Instance
     {
@@ -99,7 +99,7 @@ extern "C"
 
         union
         {
-            TDC_Instance_Context_t * Context;
+            TDC_InstanceContext_t * Context;
             TDC_GP22_Instance_t * GP22;
         };
     } TDC_Instance_t;
